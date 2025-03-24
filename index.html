@@ -28,7 +28,7 @@
                             </ul>
                         </div>
                         <div class="menu-bar">
-                            <svg  class="menu-items-1" id="menuBurger" xmlns="http://www.w3.org/2000/svg" width="2rem" height="2rem" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-dasharray="24" stroke-dashoffset="24" stroke-linecap="round" stroke-width="2"><path d="M5 5H19"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="24;0"/></path><path d="M5 12H19"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="24;0"/></path><path d="M5 19H19"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.2s" values="24;0"/></path></g></svg>
+                            <svg  class="menu-items-1" id="menuBurger" xmlns="http://www.w3.org/2000/svg" width="24px" height="24px" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-dasharray="24" stroke-dashoffset="24" stroke-linecap="round" stroke-width="2"><path d="M5 5H19"><animate fill="freeze" attributeName="stroke-dashoffset" dur="0.2s" values="24;0"/></path><path d="M5 12H19"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.2s" dur="0.2s" values="24;0"/></path><path d="M5 19H19"><animate fill="freeze" attributeName="stroke-dashoffset" begin="0.4s" dur="0.2s" values="24;0"/></path></g></svg>
                         </div>
                        
                     </div>
@@ -67,7 +67,7 @@
         
                 <div class="img-easter">
         
-                    <img src="./images/8df70020d88b852130e07109a3a32ca6.jpeg" alt="image-paque">
+                    <img src="./images/paque.jpeg" alt="image-paque">
                     <a href="" class="table roboto-bold search">Reserver une table</a>
         
                 </div>
@@ -78,42 +78,34 @@
 
         <section class="container">
             
-        <div>
             <div class="menu-africa">
-                <h3>Decouvrez nos specialites africaines</h3>
-                <a href="" class="plus order roboto-bold search">Voir Plus</a>
-            </div><br /><br /><br /><br />
-            <div class=" image-plat">
-                <div>
-                    <img src="./images/poulet.webp" alt="">
-                </div>
-                <div>
-                    <img src="./images/iStock-1436737003.jpg" alt="">
-                </div>
-                <div>
-                    <img src="./images/7e7c1cffc2ed4091b569ba3fe331d183.jpg" alt="">
-                </div>
+                <h2>Decouvrez nos spécialités africaines</h2>
+                
+                <div class=" image-plat">
+                    <div>
+                        <img src="./images/poulet.webp" alt="poulet">
+                    </div>
+                    <div>
+                        <img src="./images/attieke.png" alt="attieke">
+                    </div>
+                    <div>
+                        <img src="./images/riz.jpg" alt="riz">
+                    </div>
+                    <div>
+                        <img src="./images/tchep.png" alt="tchep">
+                    </div>
+                    <div>
+                        <img src="./images/foufou.jpg" alt="foufou">
+                    </div>
+                    <div>
+                        <img src="./images/mafe.png" alt="mafe">
+                    </div>
 
+                </div>
+                <div >
+                    <a href="" class="plus order roboto-bold search">Voir Plus</a>
+                </div>
             </div>
-        </div><br /><br /><br /><br />
-        <div>
-            <div class="menu-africa">
-                <h3>Decouvrez nos specialites africaines</h3>
-                <a href="" class=" plus order roboto-bold search">Voir Plus</a>
-            </div><br /><br /><br /><br />
-            <div class="image-plat">
-                <div>
-                    <img src="./images/7e7c1cffc2ed4091b569ba3fe331d183.jpg" alt="">
-                </div>
-                <div>
-                    <img src="./images/maxresdefault-2.jpg" alt="">
-                </div>
-                <div>
-                    <img src="./images/poulet.webp" alt="">
-                </div>
-
-            </div>
-        </div>
         </section>
     </main>   <br /><br /><br /><br />
     <footer class="footer max-container">
@@ -154,19 +146,22 @@
     <script>
         const menuBurger = document.getElementById('menuBurger');
         const menuItems = document.querySelector('.menu-items');
-
+    
         menuBurger.addEventListener('click', () => {
             menuItems.classList.toggle('show');
+            menuBurger.classList.toggle('active'); 
         });    
-
-        
+    
         document.addEventListener('click', (event) => {
             if (!menuBurger.contains(event.target) && !menuItems.contains(event.target)) {
                 menuItems.classList.remove('show');
+                menuBurger.classList.remove('active'); // Retire la classe active
             }
         });      
-        
     </script>
+
 </body>
 
 </html>
+
+
